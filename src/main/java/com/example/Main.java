@@ -1,5 +1,6 @@
 package com.example;
 
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -14,10 +15,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
+
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
-                .header("accept", "application/json")
+//                .header("accept", "application/json")
                 .uri(URI.create(NASA_URL))
                 .build();
 
